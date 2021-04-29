@@ -7,8 +7,8 @@ public class Main {
 		Hangman game = new Hangman();
 		Character c;
 		
-		if (0 < args.length && null != args[0]) {
-			game.newGame(args[0]);
+		if (2 <= args.length && null != args[0] && null != args[1]) {
+			game.newGame(args[0], Integer.parseInt(args[1]));
 		}
 		
 		while (!game.isLose() && !game.isWin()) {

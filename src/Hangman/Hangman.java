@@ -16,9 +16,10 @@ public class Hangman {
 	}
 	
 	// Creates a new game from scratch with a new text
-	public void newGame(String text) {
+	public void newGame(String text, int fails) {
 		mText = new String(text);
 		mGuesses = new HashMap<Character, Boolean>();
+		mMistakesRemaining = fails;
 	}
 	
 	// Guesses a letter in the text, returns true if contained in text
